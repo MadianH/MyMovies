@@ -60,8 +60,9 @@
   * Creer un reduceur qui stockera les informations de l'utilisateur connecté
 
 ### Navigation du site
- **Créer un composant Navbar qui contient :**  
-    * Logo du site
-    * Bouton qui affiche les films
-    * Bouton qui affiche les films favoris
-    * Bouton qui affiche le modal inscription/connection
+
+**Créer un composant Navbar qui contient :**  
+  * Logo du site
+  * Bouton qui affiche les films
+  * Bouton qui affiche les films favoris
+  * Bouton qui affiche le modal inscription/connection
