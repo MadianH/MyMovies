@@ -5,8 +5,8 @@
   et "liker" les films. Si un film est "liker" vous le retrouverai dans vos favoris.
 
 ## Build
-  *Create React App*
-  *Redux*
+  * Create React App
+  * Redux
 
 
 ## Librairies
@@ -17,22 +17,21 @@
 ## Composants
 
   **App**
-
   Composant parent de tous les composants
+
   **Card**
-
   Contient les films proposés et liker
+
   **Navbar**
-
   Contient les boutons de navigation
+
   **Modal**
-
   Contient les formulaires inscription / connection
+
   **Input**
-
   Créer des formulaires inscription / connection
-  **Button**
 
+  **Button**
   Créer les boutons présents sur le site
 
 
