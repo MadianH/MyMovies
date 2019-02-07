@@ -1,20 +1,20 @@
-### MyMovies
+# MyMovies
 
   Mymovies est une application web qui permet de se créer une liste de films favoris.
   Une liste de films vous ai proposé sur la page d'accueil, vous pouvez parcourir la liste
   et "liker" les films. Si un film est "liker" vous le retrouverai dans vos favoris.
 
-#Build
+## Build
   *Create React App*
   *Redux*
 
 
-#Librairies
+## Librairies
 
   En cours...
 
 
-#Composants
+## Composants
 
   **App**
   Composant parent de tous les composants
@@ -30,14 +30,14 @@
   Créer les boutons présents sur le site
 
 
-#Reduceur
+##Reduceur
 
   *movieList : contient les films proposés*
   *movieLikeList : contient les films liker*
   *modal : contient l'etat isOpen : true/false du modal*
 
 
-#User stories
+##User stories
 
   *Parcourir une liste de films
   *Inscription du visiteur
@@ -45,7 +45,7 @@
   *If(visiteur === connecté): liker un film => retrouver les films liker en favori*
 
 
-#Tâches
+##Tâches
 
   **Afficher la liste de films proposés**
     *Se brancher au backEnd
