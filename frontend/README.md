@@ -31,9 +31,9 @@
 
 ## Reduceur
 
-  * movieList : contient les films proposés
-  * movieLikeList : contient les films liker
-  * modal : contient l'etat isOpen : true/false du modal
+  * **movieList** : contient les films proposés
+  * **movieLikeList** : contient les films liker
+  * **modal** : contient l'etat isOpen : true/false du modal
 
 
 ## User stories
@@ -47,17 +47,17 @@
 ## Tâches  
 
 ### Afficher la liste de films proposés
-  * Se brancher au backEnd  
-  * Fetch la liste de films proposés  
-  * Créer un composant Card pour contenir les films  
-  * Créer une fonction pour liker un film (le film liker doit être envoyé au backend)  
+  1. Se brancher au backEnd  
+  2. Fetch la liste de films proposés  
+  3. Créer un composant **Card** pour contenir les films  
+  4. Créer une fonction pour liker un film (le film liker doit être envoyé au backend)  
 
 ### Inscription / Authentification
-  * Créer un composant Input  
-  * Créer un composant Modal qui contient les inputs inscription/connection  
-  * Inscription: envoyer au backEnd les informations de l'utilisateur / indiqué à l'utilisateur la réponse du backend(insription validé ou non-validé)    
-  * Connection: envoyer les informations de l'utilisateur / indiqué à l'utilisateur la réponse du backend(connection validé ou non-validé)  
-  * Creer un reduceur qui stockera les informations de l'utilisateur connecté
+  1. Créer un composant **Input**  
+  2. Créer un composant **Modal** qui contient les inputs inscription/connection  
+  3. Inscription: envoyer au backEnd les informations de l'utilisateur / indiqué à l'utilisateur la réponse du backend(insription validé ou non-validé)    
+  4. Connection: envoyer les informations de l'utilisateur / indiqué à l'utilisateur la réponse du backend(connection validé ou non-validé)  
+  5. Creer un reduceur qui stockera les informations de l'utilisateur connecté
 
 ### Navigation du site
 
