@@ -47,12 +47,14 @@
 ## Tâches
 
   **Afficher la liste de films proposés**  
+
     * Se brancher au backEnd  
     * Fetch la liste de films proposés  
     * Créer un composant Card pour contenir les films  
     * Créer une fonction pour liker un film (le film liker doit être envoyé au backend)  
 
   **Inscription / Authentification**  
+
     * Créer un composant Input  
     * Créer un composant Modal qui contient les inputs inscription/connection  
     * Inscription: envoyer au backEnd les informations de l'utilisateur / indiqué à l'utilisateur la réponse du backend(insription validé ou non-validé)    
@@ -60,6 +62,7 @@
     * Creer un reduceur qui stockera les informations de l'utilisateur connecté
 
   **Navigation du site**  
+  
     * Créer un composant Navbar qui contient :
       - Logo du site
       - Bouton qui affiche les films
