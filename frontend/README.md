@@ -16,22 +16,22 @@
 
 ## Composants
 
-  **App**
+  **App**  
   Composant parent de tous les composants
 
-  **Card**
+  **Card**  
   Contient les films proposés et liker
 
-  **Navbar**
+  **Navbar**  
   Contient les boutons de navigation
 
-  **Modal**
+  **Modal**  
   Contient les formulaires inscription / connection
 
-  **Input**
+  **Input**  
   Créer des formulaires inscription / connection
 
-  **Button**
+  **Button**  
   Créer les boutons présents sur le site
 
 
