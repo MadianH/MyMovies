@@ -1,4 +1,4 @@
-### MyMovies
+# MyMovies
 
   Mymovies est une application web qui permet de se créer une liste de films favoris.
   Une liste de films vous ai proposé sur la page d'accueil, vous pouvez parcourir la liste
