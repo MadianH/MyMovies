@@ -17,27 +17,33 @@
 ## Composants
 
   **App**
+
   Composant parent de tous les composants
   **Card**
+
   Contient les films proposés et liker
   **Navbar**
+
   Contient les boutons de navigation
   **Modal**
+
   Contient les formulaires inscription / connection
   **Input**
+
   Créer des formulaires inscription / connection
   **Button**
+
   Créer les boutons présents sur le site
 
 
-##Reduceur
+## Reduceur
 
-  *movieList : contient les films proposés*
-  *movieLikeList : contient les films liker*
-  *modal : contient l'etat isOpen : true/false du modal*
+  *movieList : contient les films proposés
+  *movieLikeList : contient les films liker
+  *modal : contient l'etat isOpen : true/false du modal
 
 
-##User stories
+## User stories
 
   *Parcourir une liste de films
   *Inscription du visiteur
@@ -45,7 +51,7 @@
   *If(visiteur === connecté): liker un film => retrouver les films liker en favori*
 
 
-##Tâches
+## Tâches
 
   **Afficher la liste de films proposés**
     *Se brancher au backEnd
