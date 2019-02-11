@@ -4,9 +4,10 @@
   Une liste de films vous ai proposé sur la page d'accueil, vous pouvez parcourir la liste
   et "liker" les films. Si un film est "liker" vous le retrouverai dans vos favoris.
 
-## Build
+## Stack
   * Create React App
   * Redux
+  * Rest
 
 
 ## Librairies
