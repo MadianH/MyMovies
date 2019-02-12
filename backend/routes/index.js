@@ -20,7 +20,7 @@ var dateNow = function () {
 router.get('/movieList', function(req, res, next) {
   let movieList = []
   let newDate = dateNow()
-  // Intérroge l'API Movie database
+  // Intérroge l'API Movie database sur les films sortie ultérieurement à la date actuelle
   request(`https://api.themoviedb.org/3/discover/movie?vote_count.lte.gte=5&release_date.lte=${newDate}&api_key=${login.keyMovieDatabase}&language=fr&region=fr`,
      function(error, response, body) {
        let brut = JSON.parse(body);
@@ -37,15 +37,21 @@ router.get('/movieList', function(req, res, next) {
   });
 });
 
-// // GET likeMovieList
-// router.get('/likemovieList', function(req, res, next) {
-//   let likeMovieList;
-//   // Intérroge l'API Movie database
-//   request(`https://api.themoviedb.org/3/discover/movie?vote_count.lte.gte=5&release_date.lte=${newDate}&api_key=${login.keyMovieDatabase}&language=fr&region=fr`,
-//      function(error, response, body) {
-//        movieList = JSON.parse(body);
-//        res.json({ movieList: movieList });
-//   });
-// });
+// GET likeMovieList
+router.get('/likeMovieList', function(req, res, next) {
+  let idLikeMovieList = ["424694", "438799", "375588"]
+  let likeMovieList = []
+  // Boucle sur le tableau likeMovieList est recherche dans l'API Movie database le film correspondant à l'id
+  idLikeMovieList.map((id) => {
+    request(`https://api.themoviedb.org/3/movie/${id}?language=fr&api_key=${login.keyMovieDatabase}`,
+       function(error, response, body) {
+         let brut = JSON.parse(body);
+         likeMovieList.push(brut.title)
+         console.log(likeMovieList);
+    });
+  })
+
+  // res.json({ movieList: brut});
+});
 
 module.exports = router;
