@@ -3,7 +3,7 @@ var router = express.Router();
 // le module request permet à l'API de pouvoir request une autre API
 var request = require('request');
 // import les logins sensibles
-var login = require("../login.js");
+var login = require("../login.log");
 
 
 /* GET movieList*/
