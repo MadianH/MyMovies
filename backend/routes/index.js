@@ -50,7 +50,12 @@ router.get('/likeMovieList', function(req, res, next) {
         request(`https://api.themoviedb.org/3/movie/${id}?language=fr&api_key=${login.keyMovieDatabase}`,
            function(error, response, body) {
              let brut = JSON.parse(body);
-             likeMovieList.push(brut.title)
+             let movie = {}
+             movie.id = brut.id
+             movie.title = brut.title
+             movie.overview = brut.overview
+             movie.img = "https://image.tmdb.org/t/p/w500" + brut.poster_path
+             likeMovieList.push(movie)
              if(idLikeMovieList.length === likeMovieList.length) {
                resolve(likeMovieList)
              }
