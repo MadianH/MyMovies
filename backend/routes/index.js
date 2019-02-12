@@ -16,6 +16,7 @@ var dateNow = function () {
 }
 
 
+
 /* GET movieList*/
 router.get('/movieList', function(req, res, next) {
   let movieList = []
@@ -37,21 +38,33 @@ router.get('/movieList', function(req, res, next) {
   });
 });
 
+
 // GET likeMovieList
 router.get('/likeMovieList', function(req, res, next) {
   let idLikeMovieList = ["424694", "438799", "375588"]
   let likeMovieList = []
-  // Boucle sur le tableau likeMovieList est recherche dans l'API Movie database le film correspondant à l'id
-  idLikeMovieList.map((id) => {
-    request(`https://api.themoviedb.org/3/movie/${id}?language=fr&api_key=${login.keyMovieDatabase}`,
-       function(error, response, body) {
-         let brut = JSON.parse(body);
-         likeMovieList.push(brut.title)
-         console.log(likeMovieList);
-    });
+  let test = function (idLikeMovieList) {
+    return new Promise (function(resolve, reject) {
+      idLikeMovieList.map((id) => {
+        // Boucle sur le tableau likeMovieList est recherche dans l'API Movie database le film correspondant à l'id
+        request(`https://api.themoviedb.org/3/movie/${id}?language=fr&api_key=${login.keyMovieDatabase}`,
+           function(error, response, body) {
+             let brut = JSON.parse(body);
+             likeMovieList.push(brut.title)
+             if(idLikeMovieList.length === likeMovieList.length) {
+               resolve(likeMovieList)
+             }
+        });
+      })
+
+    })
+  }
+
+  test(idLikeMovieList).then(
+    function(response) {
+      res.json({ movieList: response});
   })
 
-  // res.json({ movieList: brut});
 });
 
 module.exports = router;
