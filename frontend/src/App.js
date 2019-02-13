@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { library } from '@fortawesome/fontawesome-svg-core'
 
 import CardMovie from './Card'
 
@@ -17,7 +18,6 @@ class App extends Component {
       fetch('http://localhost:3000/movieList')
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
         let newMovieList = [...data.movieList]
         this.setState({movieList: newMovieList, loading: ""})
       }).catch((error) => {
@@ -28,7 +28,6 @@ class App extends Component {
   }
 
   render() {
-      console.log(this.state.movieList);
     let movieList = this.state.movieList.map((item, index) => {
         return <CardMovie key={index} id={item.id} title={item.title} overview={item.overview} img={item.img} />
       })
