@@ -1,20 +1,18 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle } from 'reactstrap';
 import './App.css';
 
 
 class Card extends Component {
   render() {
     return (
-      <div>
-        <Card>
-          <CardImg top width="100%" src={this.props.img} alt="Card image cap" />
-          <CardBody>
-            <CardTitle>{this.props.title}</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
-            <CardText>{this.props.overview}</CardText>
-          </CardBody>
-        </Card>
+      <div className="card col-6 col-lg-3">
+        <img src={this.props.img} className="img" alt="affiche du film" />
+        <div className="card-body">
+          <h5 className="card-title">{this.props.title}</h5>
+          <div className="card-text">
+            <p>{this.props.overview}</p>
+          </div>
+        </div>
       </div>
     );
   }
