@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import '../App.css';
+import React from 'react';
+import { Container, Button, Modal, ModalBody, ModalHeader, ModalFooter } from 'mdbreact';
+import {connect} from 'react-redux';
 
-import Button from './Button'
 
-class Modal extends Component {
+
+class ModalSign extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,14 +12,44 @@ class Modal extends Component {
     };
   }
 
+  toggleModalForm = () =>{
+    if(this.props.PropsModalIsOpen.ModalSignIn.boolean){
+      this.props.ModalIsOpen();
+    }
+  }
+
   render() {
 
     return (
-      <div id="modal">
-
-      </div>
+      <Container>
+        <Modal isOpen={this.props.PropsModalIsOpen.ModalSignIn.boolean} centered>
+          <ModalBody id="ModalForm">
+            <div className="Flex-row Justify-content-end">
+              <span className="Font-color-black Font-bold Close" onClick={() => this.toggleModalForm()}>X</span>
+            </div>
+            <TabForm />
+          </ModalBody>
+        </Modal>
+      </Container>
     );
   }
 }
 
-export default Modal;
+
+
+function mapDispatchToProps(dispatch) {
+  return {
+    ModalIsOpen: function() {
+        dispatch( {type: 'CloseModalSignIn', boolean: false} )
+    }
+  }
+}
+
+function mapStateToProps(state) {
+  return {}
+}
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ModalSign);
