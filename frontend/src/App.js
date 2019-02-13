@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import { library } from '@fortawesome/fontawesome-svg-core'
-
-import CardMovie from './Card'
+import Navbar from './Components/Navbar'
+import CardMovie from './Components/Card'
 
 class App extends Component {
   constructor(props) {
@@ -33,7 +32,8 @@ class App extends Component {
       })
     return (
       <div className="App container-fluid">
-        <div className="row">
+        <div className="row flex flex-row justify-center">
+          <Navbar />
           {movieList}
           {this.state.loading}
         </div>

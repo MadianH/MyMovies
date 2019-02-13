@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faHeart} from '@fortawesome/free-solid-svg-icons'
 
@@ -23,7 +23,7 @@ class Card extends Component {
       classHeart.push("like")
     }
     return (
-      <div className="card col-6 col-lg-3">
+      <div id="card"className="col-6 col-lg-3">
         <img src={this.props.img} className="img" alt="affiche du film" />
         <div className="card-body">
           <h5 className="card-title">
