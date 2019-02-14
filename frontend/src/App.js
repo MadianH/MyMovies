@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import {Provider} from 'react-redux';
+import {createStore, combineReducers}  from 'redux';
+import ModalReducer from './Reducers/Modal.reducer';
 import Navbar from './Components/Navbar'
 import CardMovie from './Components/Card'
+import ModalSign from './Components/ModalSign'
+
+const store = createStore(combineReducers({ModalReducer}));
 
 class App extends Component {
   constructor(props) {
@@ -11,7 +17,6 @@ class App extends Component {
       movieList: []
     };
   }
-
 
   componentDidMount(){
       fetch('http://localhost:3000/movieList')
@@ -31,13 +36,14 @@ class App extends Component {
         return <CardMovie key={index} id={item.id} title={item.title} overview={item.overview} img={item.img} />
       })
     return (
-      <div className="App container-fluid">
+      <Provider store={store} className="App container-fluid">
         <div className="row flex flex-row justify-center">
           <Navbar />
+          <ModalSign />
           {movieList}
           {this.state.loading}
         </div>
-      </div>
+      </Provider>
     );
   }
 }

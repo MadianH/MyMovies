@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import '../App.css';
-
 import logo from '../logo.png'
 import Button from './Button'
 
-
-
 class Navbar extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-
-    };
-  }
-
-  connection = () => {
-    console.log("ok");
+  
+  openModal = () => {
+    this.props.OpenModal()
   }
 
   render() {
@@ -26,10 +18,21 @@ class Navbar extends Component {
         <div>MyMovies</div>
         <Button content={"Liste de film"} handle={this.connection} />
         <Button content={"Mes films favoris"} handle={this.connection} />
-        <Button content={"connexion"} handle={this.connection} />
+        <Button content={"connexion"} handle={this.openModal} />
       </div>
     );
   }
 }
 
-export default Navbar;
+function mapDispatchToProps(dispatch) {
+  return {
+    OpenModal: function() {
+        dispatch( {type: 'OpenModal'})
+    }
+  }
+}
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(Navbar);
